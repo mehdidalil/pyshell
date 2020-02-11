@@ -1,7 +1,9 @@
+import os
+import subprocess
 from parseLine import parseLine
 from Exec import Exec
 from Builtin import Builtin
-from echo import echo
+from cd import cd
 
 def main():
 	while True:
