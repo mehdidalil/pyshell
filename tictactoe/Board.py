@@ -8,7 +8,8 @@ class Board():
 		self.pieces = [" " for i in range(0, 9)]
 
 	def display(self):
-		os.system("clear")
+		if os.getenv("TERM"):
+			os.system("clear")
 		for i in range(len(self.pieces)):
 			if i % 3 == 0:
 				sys.stdout.write("\n-----------------\n")
