@@ -4,7 +4,7 @@ versionCheck()
 from getLine import getLine
 from parseLine import parseLine
 
-def main():
+def pyshell():
 	while True:
 		line = getLine("pyshell -> ")
 		lines = line.split(";")
@@ -12,4 +12,4 @@ def main():
 			parseLine(line)
 
 if __name__ == "__main__":
-	main()
+	pyshell()
