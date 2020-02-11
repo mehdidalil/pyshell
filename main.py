@@ -1,7 +1,6 @@
 from parseLine import parseLine
 from Exec import Exec
 from Builtin import Builtin
-import os
 from echo import echo
 
 def main():

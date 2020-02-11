@@ -8,17 +8,19 @@ def checkOptions(options, optionList):
 			raise Exception("Option does not exist: {}".format(i))
 	return optionsTmp
 	
-def parseArgs(args, optionList):
+def parseOptions(args, optionList):
 	options = []
+	garbage = []
 	index = 0
 	for i in args:
 		if i.startswith("-"):
 			try:
 				options.extend(checkOptions(i[1:], optionList))
-				index += 1
+				garbage.append(i)
 			except Exception as e:
 				pass
 		else:
 			break
-	args = args[index:]
-	return (options, args)
+	for i in garbage:
+		args.remove(i)
+	return options

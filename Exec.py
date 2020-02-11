@@ -1,14 +1,16 @@
 import subprocess
+import os
 from Process import Process
 
 class Exec(Process):
 
 	def __init__(self, args):
 		super().__init__(args)
-	def run(self):
+
+	def run(self, env=os.environ):
 		try:
-			ret = subprocess.call(self.args)
+			ret = subprocess.call(self.args, env=env)
 		except:
-			print("program not found")
+			print(f'{self.args[0]}: Command not found')
 			return 1
 		return ret

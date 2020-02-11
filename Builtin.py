@@ -1,13 +1,15 @@
+import sys
 from Process import Process
 from setenv import setenv
 from unsetenv import unsetenv
 from echo import echo
 from exit import exit
+from env import env
 from tictactoe import tictactoe
-import sys
 
 class Builtin(Process):
-	list = {"setenv": setenv, "unsetenv": unsetenv, "echo": echo, "exit": exit, "tictactoe": tictactoe}
+	list = {"setenv": setenv, "unsetenv": unsetenv, "echo": echo, "exit": exit, "env": env, "tictactoe": tictactoe}
+
 	def __init__(self, args):
 		super().__init__(args)
 

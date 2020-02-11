@@ -1,8 +1,10 @@
 import sys
-from parseArgs import parseArgs
+from parseOptions import parseOptions
+
+optionList = "ne"
 
 def echo(args):
-	options, args = parseArgs(args, "ne")
+	options = parseOptions(args, optionList)
 	str = ' '.join(args)
 	str = str + '' if 'n' in options else str + '\n'
 	sys.stdout.write(str)
