@@ -22,6 +22,12 @@ def cd(args):
 	mode = 0
 	if pwd == None:
 		raise Exception("Term variable PWD not set")
+	if len(args) > 1:
+		raise Exception("Too much arguments")
+	try:
+		os.stat(pwd)
+	except:
+		raise Exception("PWD not valid")
 	try:
 		mode = os.stat(args[0]).st_mode
 	except:
