@@ -1,22 +1,15 @@
-import sys
+from versionCheck import versionCheck
+versionCheck()
 
-if __name__ == "__main__":
-	if sys.version_info[0] < 3:
-		print("Python 3 or a more recent version is required.")
-		exit()
-
+from getLine import getLine
 from parseLine import parseLine
-from Exec import Exec
-from Builtin import Builtin
 
 def main():
 	while True:
-		tab = parseLine("pyshell -> ")
-		proc = Builtin(tab)
-		ret = proc.run()
-		if ret == None:
-			proc = Exec(tab)
-			ret = proc.run()
+		line = getLine("pyshell -> ")
+		lines = line.split(";")
+		for line in lines:
+			parseLine(line)
 
 if __name__ == "__main__":
 	main()
