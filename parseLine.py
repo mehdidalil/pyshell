@@ -1,5 +1,5 @@
-from Exec import Exec
 from Builtin import Builtin
+from Exec import Exec
 
 def parseLine(line):
 	line = line.split()

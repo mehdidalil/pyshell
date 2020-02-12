@@ -1,7 +1,7 @@
 import os
 import sys
+from .parseOptions import parseOptions
 from Exec import Exec
-from parseOptions import parseOptions
 
 optionList = "i"
 

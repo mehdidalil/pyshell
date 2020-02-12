@@ -1,5 +1,5 @@
 import sys
-from parseOptions import parseOptions
+from .parseOptions import parseOptions
 
 optionList = "ne"
 

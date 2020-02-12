@@ -1,5 +1,5 @@
 import os
-from env import env
+from .env import env
 
 def setenv(args):
 	value = "" if len(args) <= 1 else args[1]

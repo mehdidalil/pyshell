@@ -1,12 +1,13 @@
 import sys
+from .setenv import setenv
+from .unsetenv import unsetenv
+from .echo import echo
+from .exit import exit
+from .env import env
+from .cd import cd
+from .tictactoe import tictactoe
 from Process import Process
-from setenv import setenv
-from unsetenv import unsetenv
-from echo import echo
-from exit import exit
-from env import env
-from cd import cd
-from tictactoe import tictactoe
+
 
 class Builtin(Process):
 	list = {
